@@ -1,0 +1,33 @@
+{
+  "name": "solving-hcaptcha-using-puppeteer",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzmitry-duboyski/solving-hCaptcha-using-puppeteer.git"
+  },
+  "keywords": [
+    "captcha",
+    "solving",
+    "solve",
+    "hcaptcha",
+    "bypass",
+    "hcaptcha",
+    "puppeteer",
+    "2captcha"
+  ],
+  "author": "Dima Dub",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzmitry-duboyski/solving-hCaptcha-using-puppeteer/issues"
+  },
+  "homepage": "https://github.com/dzmitry-duboyski/solving-hCaptcha-using-puppeteer#readme",
+  "dependencies": {
+    "2captcha-ts": "^2.0.1",
+    "puppeteer": "^19.11.1"
+  }
+}
