@@ -1,7 +1,7 @@
 {
   "name": "solving-hcaptcha-using-puppeteer",
   "version": "1.0.0",
-  "description": "description",
+  "description": "Sample code to automate captcha solution using Puppeteer",
   "main": "index.js",
   "type": "module",
   "scripts": {
