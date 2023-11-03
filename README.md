@@ -2,7 +2,7 @@
 
 ## Description
 
-This code example demonstrates how to automate solving a hCaptcha using the [Puppeteer](https://pptr.dev/) library. To captcha solving, this example uses the [2captcha.com](https://2captcha.com/?from=16653706) service. This example solves the captcha located on the page https://2captcha.com/demo/hcaptcha?difficulty=difficult. You need to have a [2captcha.com](https://2captcha.com/?from=16653706) account for the example to work.
+This code example demonstrates how to automate solving a hCaptcha in JavaScript using the [Puppeteer](https://pptr.dev/) library. To captcha solving, this example uses the [2captcha.com](https://2captcha.com/?from=16653706) service. This example solves the captcha located on the page https://2captcha.com/demo/hcaptcha?difficulty=difficult. You need to have a [2captcha.com](https://2captcha.com/?from=16653706) account for the example to work.
 
 ## How to start:
 
@@ -100,4 +100,4 @@ The source code is available in the file [index.js](/index.js)
 - [hCaptcha demo page](https://2captcha.com/demo/hcaptcha?difficulty=difficult&from=16653706).
 - [Documentation for hCaptcha solution in 2captcha service](https://2captcha.com/2captcha-api#solving_hcaptcha?from=16653706).
 - [How to bypass hCaptcha](https://2captcha.com/p/hcaptcha/?from=16653706)
-- [hCaptcha on Cloudflare-protected websites](https://2captcha.com/blog/hcaptcha-cloudflare-en?from=16653706)
+- [How to solve hCaptcha on Cloudflare-protected websites](https://2captcha.com/blog/hcaptcha-cloudflare-en?from=16653706)
