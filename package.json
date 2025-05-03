@@ -19,7 +19,8 @@
     "bypass",
     "hcaptcha",
     "puppeteer",
-    "2captcha"
+    "2captcha",
+    "2captcha-ts"
   ],
   "author": "Dima Dub",
   "license": "MIT",
@@ -28,7 +29,7 @@
   },
   "homepage": "https://github.com/dzmitry-duboyski/solving-hCaptcha-using-puppeteer#readme",
   "dependencies": {
-    "2captcha-ts": "^2.0.1",
+    "2captcha-ts": "^2.4.1",
     "puppeteer": "^19.11.1"
   }
 }
