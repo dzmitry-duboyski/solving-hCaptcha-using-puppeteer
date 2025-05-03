@@ -9,32 +9,30 @@ const solver = new Solver('<Your 2captcha APIKEY>');
 
   const page = await browser.newPage();
   await page.setViewport({ width: 1080, height: 1024 });
-
-  // Open target page
-  await page.goto("https://2captcha.com/demo/hcaptcha?difficulty=difficult");
+    
+  // STEP #1 - Open the page with the CAPTCHA
+  // Open the target page and detect the presence of a CAPTCHA challenge.
+  await page.goto("https://accounts.hcaptcha.com/demo");
   await page.waitForSelector("div.h-captcha iframe");
 
-  // Get the `sitekey` parameter from the current page
-  const sitekey = await page.evaluate(() => {
-    const url = document.querySelector("div.h-captcha iframe").src;
-    const pureSiteKey = url.split("sitekey=")[1].split("&")[0];
-    return pureSiteKey;
-  });
+  // STEP #2 - Extract CAPTCHA parameters
+  // In this example, parameters are hardcoded for simplicity. However, in real scenarios,
+  // you may need to dynamically extract them from the page each time.
+  const pageURL = "https://accounts.hcaptcha.com/demo"
+  const sitekey = "a5f74b19-9e45-40e0-b45d-47ff91b7a6c2"
 
-  console.log(`sitekey: ${sitekey}`);
-
-  // Send a captcha to the 2captcha service to get a solution
+  // STEP #3 - Submit CAPTCHA to the API
   const res = await solver.hcaptcha({
-    pageurl: "https://2captcha.com/demo/hcaptcha?difficulty=difficult",
+    pageurl: pageURL,
     sitekey: sitekey,
   });
 
   console.log(res);
 
-  // The resulting solution
+  // STEP #4 - Receive the CAPTCHA token
   const captchaAnswer = res.data;
 
-  // Use the resulting solution on the page
+  // STEP #5 - Apply the solution
   const setAnswer = await page.evaluate((captchaAnswer) => {
     document.querySelector(
       "textarea[name='h-captcha-response']"
@@ -44,19 +42,23 @@ const solver = new Solver('<Your 2captcha APIKEY>');
   }, captchaAnswer);
 
   // Press the button to check the result.
-  await page.click('button[type="submit"]');
+  await page.click('input[type="submit"]');
 
-  // Check result
-  await page.waitForSelector("form div pre code");
+  // STEP #6 - Verify the solution
+  await page.waitForSelector("pre.hcaptcha-success");
 
-  const resultBlockSelector = "form div pre code";
-  let statusSolving = await page.evaluate((selector) => {
+  const resultBlockSelector = "pre.hcaptcha-success";
+  const statusSolving = await page.evaluate((selector) => {
     return document.querySelector(selector).innerText;
   }, resultBlockSelector);
 
-  statusSolving = JSON.parse(statusSolving);
-  if (statusSolving.success) {
+  const statusSolvingJSON = JSON.parse(statusSolving);
+  const isSuccessSolving = statusSolvingJSON.success;
+
+  if (isSuccessSolving) {
     console.log("Captcha solved successfully!!!");
+  } else {
+    console.log("Captcha solving failed!!!");
   }
 
   await page.waitForTimeout(5000);
