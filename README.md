@@ -45,8 +45,8 @@ This section describes the general logic of CAPTCHA solving using our API. The p
 
 1. **STEP #1 - Open the page with the CAPTCHA**
    Open the target page and detect the presence of a CAPTCHA challenge.  
-   > [!TIP]
-   > Note: The CAPTCHA may be embedded in an `iframe` or loaded dynamically, so make sure to wait for the necessary elements to load before proceeding.
+> [!TIP]
+> Note: The CAPTCHA may be embedded in an `iframe` or loaded dynamically, so make sure to wait for the necessary elements to load before proceeding.
 
 2. **STEP #2 - Extract CAPTCHA parameters**  
    Determine the parameters required to solve the CAPTCHA.  
@@ -61,10 +61,10 @@ This section describes the general logic of CAPTCHA solving using our API. The p
 4. **STEP #4 - Receive the CAPTCHA token**  
    Wait for the response from the API. This usually contains a token or a code needed to pass the CAPTCHA.  
 
-   > [!NOTE] 
-   > You should handle possible errors at this step:  
-   > - If the CAPTCHA is not solved successfully, try to resend it.  
-   > - Check for timeouts or invalid API responses.
+> [!NOTE] 
+> You should handle possible errors at this step:  
+> - If the CAPTCHA is not solved successfully, try to resend it.  
+> - Check for timeouts or invalid API responses.
 
 5. **STEP #5 - Apply the solution**
    Use the returned token on the target page.
@@ -73,12 +73,12 @@ This section describes the general logic of CAPTCHA solving using our API. The p
    - Executing a JavaScript callback with the token.
    - Triggering a form submission.
 
-   > [!TIP]
-   > If you're unsure how the token is applied:
-   > - Analyze how the token is applied after manually solving the CAPTCHA.
-   > - Analyze network traffic after manually solving the CAPTCHA.
-   > - Inspect JavaScript event listeners and DOM mutations.
-   > - Use browser dev tools to simulate interactions.
+> [!TIP]
+> If you're unsure how the token is applied:
+> - Analyze how the token is applied after manually solving the CAPTCHA.
+> - Analyze network traffic after manually solving the CAPTCHA.
+> - Inspect JavaScript event listeners and DOM mutations.
+> - Use browser dev tools to simulate interactions.
 
 6. **STEP #6 - Verify the solution**  
    After applying the token, you should verify whether the CAPTCHA was successfully solved.
@@ -88,10 +88,10 @@ This section describes the general logic of CAPTCHA solving using our API. The p
      - Retry solving the CAPTCHA.
      - Restart the script or reload the page, depending on your setup.
 
-   > [!IMPORTANT]  
-   > It is **strongly recommended** to report the result back to the 2captcha API:  
-   > - Use `reportgood` if the token was accepted and the CAPTCHA was successfully solved.  
-   > - Use `reportbad` if the token was rejected or failed to solve the CAPTCHA.
+> [!IMPORTANT]  
+> It is **strongly recommended** to report the result back to the 2captcha API:  
+> - Use `reportgood` if the token was accepted and the CAPTCHA was successfully solved.  
+> - Use `reportbad` if the token was rejected or failed to solve the CAPTCHA.
 
 ## Source code
 
