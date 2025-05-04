@@ -168,7 +168,7 @@ The source code is available in the file [index.js](/index.js)
 
 ## Additional information:
 
-- [hCaptcha demo page](https://accounts.hcaptcha.com/demo).
+- [hCaptcha demo page](https://accounts.hcaptcha.com/demo)
 - [Documentation for hCaptcha solution in 2captcha service](https://2captcha.com/2captcha-api#solving_hcaptcha?from=16653706).
 - [How to bypass hCaptcha](https://2captcha.com/p/hcaptcha/?from=16653706)
 - [How to solve hCaptcha on Cloudflare-protected websites](https://2captcha.com/blog/hcaptcha-cloudflare-en?from=16653706)
