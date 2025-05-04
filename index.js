@@ -31,6 +31,7 @@ const solver = new Solver('<Your 2captcha APIKEY>');
 
   // STEP #4 - Receive the CAPTCHA token
   const captchaAnswer = res.data;
+  const captchaID = res.id;
 
   // STEP #5 - Apply the solution
   const setAnswer = await page.evaluate((captchaAnswer) => {
@@ -56,8 +57,12 @@ const solver = new Solver('<Your 2captcha APIKEY>');
   const isSuccessSolving = statusSolvingJSON.success;
 
   if (isSuccessSolving) {
+    // Send a report to the API confirming that the CAPTCHA was solved correctly
+    await solver.goodReport(captchaID)
     console.log("Captcha solved successfully!!!");
   } else {
+    // Send a report to the API indicating that the CAPTCHA was solved incorrectly
+    await solver.badReport(captchaID)
     console.log("Captcha solving failed!!!");
   }
 
