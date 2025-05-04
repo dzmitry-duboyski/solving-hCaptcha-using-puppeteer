@@ -12,6 +12,7 @@
 - [ ] Add a GIF demonstration showing how the code works
 - [ ] Insert a representative image at the top of the document
 - [ ] Add a social preview (GitHub Open Graph image for better link sharing)
+- [ ] Create and publish a demo video on YouTube showing how to use the script
 
 ## 🐛 Fixes
 
