@@ -30,6 +30,7 @@
   "homepage": "https://github.com/dzmitry-duboyski/solving-hCaptcha-using-puppeteer#readme",
   "dependencies": {
     "2captcha-ts": "^2.4.1",
+    "dotenv": "^16.5.0",
     "puppeteer": "^19.11.1"
   }
 }

@@ -29,7 +29,7 @@ Please be respectful and responsible. Use this repository to **test your own sys
 
 ### Setup
 
-Set your `APIKEY` in [./index.js#L3](./index.js#L3) file
+Set your `APIKEY` in [./index.js#L5](./index.js#L5) file
 
 > `APIKEY` is specified in the personal account [2captcha.com](https://2captcha.com/?from=16653706). Before copying the `APIKEY`, check the selected role, the **"developer"** role must be installed in the personal account.
 

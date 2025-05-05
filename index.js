@@ -1,6 +1,10 @@
 import puppeteer from "puppeteer";
 import { Solver } from "2captcha-ts";
-const solver = new Solver('<Your 2captcha APIKEY>');
+import dotenv from "dotenv";
+dotenv.config();
+const apiKey = process.env.API_KEY || "<Your 2captcha APIKEY>";
+const solver = new Solver(apiKey);
+
 
 ;(async () => {
   // const width = 900;
