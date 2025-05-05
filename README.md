@@ -154,8 +154,12 @@ const solver = new Solver('<Your 2captcha APIKEY>');
   const isSuccessSolving = statusSolvingJSON.success;
 
   if (isSuccessSolving) {
+    // Send a report to the API confirming that the CAPTCHA was solved correctly
+    await solver.goodReport(captchaID)
     console.log("Captcha solved successfully!!!");
   } else {
+    // Send a report to the API indicating that the CAPTCHA was solved incorrectly
+    await solver.badReport(captchaID)
     console.log("Captcha solving failed!!!");
   }
 
