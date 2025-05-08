@@ -41,6 +41,9 @@ Set your `APIKEY` in [./index.js#L5](./index.js#L5) file
 
 ## How it works
 
+### Video
+[![Watch on YouTube](https://img.youtube.com/vi/-tWwpMguWs8/hqdefault.jpg)](https://youtu.be/-tWwpMguWs8)
+
 This section describes the general logic of CAPTCHA solving using our API. The process consists of 5 main steps:
 
 1. **STEP #1 - Open the page with the CAPTCHA**
