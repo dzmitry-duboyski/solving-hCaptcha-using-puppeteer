@@ -2,7 +2,7 @@
 
 ## Description
 
-This code example demonstrates how to automate solving a hCaptcha in JavaScript using the [Puppeteer](https://pptr.dev/) library. To captcha solving, this example uses the [2captcha.com](https://2captcha.com/?from=16653706) service. This example solves the captcha located on the page https://2captcha.com/demo/hcaptcha?difficulty=difficult. You need to have a [2captcha.com](https://2captcha.com/?from=16653706) account for the example to work.
+This code example demonstrates how to automate solving a hCaptcha in JavaScript using the [Puppeteer](https://pptr.dev/) library. To captcha solving, this example uses the [2captcha.com](https://2captcha.com/?from=16653706) service. This example solves the captcha located on the page https://accounts.hcaptcha.com/demo. You need to have a [2captcha.com](https://2captcha.com/?from=16653706) account for the example to work.
 
 ## ⚠️ Disclaimer & Ethical Use
 
